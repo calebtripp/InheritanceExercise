@@ -1,39 +1,40 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using Inheritance;
 
 namespace Inheritance
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            // TODO Be sure to follow best practice when creating your classes
+        {           
+            var cardinal = new Bird();
+            cardinal.name = "Cardinal!";
+            cardinal.hollowBones = true;
+            cardinal.featherNumber = 987654321;
+            cardinal.hasABeak = true;
+            cardinal.featherColor = "Red";
+            cardinal.liveBirth = false;
+            cardinal.flies = true;
+            cardinal.breathesUnderwater = false;
+            cardinal.eatsMeat = true;                   
+            cardinal.PrintBirdFacts();
 
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
-
-
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
-
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
-
-
-
-
-            /*Create an object of your Bird class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             */
-
-            /*Create an object of your Reptile class
-             *  give values to your members using the object of your Reptile class
-             *  
-             * Creatively display the class member values 
-             */
+            Console.WriteLine();
+            Console.WriteLine();
+           
+            var alligator = new Reptile();
+            alligator.name = "Alligator!";
+            alligator.performsDeathroll = true;
+            alligator.livesUnderwater = true;
+            alligator.bellyColor = "Whitish Yellow";
+            alligator.teethNumber = 80;
+            alligator.liveBirth = false;
+            alligator.flies = false;
+            alligator.breathesUnderwater = false;
+            alligator.eatsMeat = true;
+            alligator.PrintGatorFacts();            
         }
     }
 }
